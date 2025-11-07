@@ -8,7 +8,7 @@
       text: "A signature mark of elegance - this gold-plated emblem adds a touch of luxury while symbolizing exceptional craftsmanship."
     },
     {
-      image: "images/airpods.png",
+      image: "images/casing.png",
       title: "Durable Plastic Casing",
       text: "Built to last. The high-grade polymer shell protects your earbuds from daily wear, ensuring lasting performance and style."
     },
