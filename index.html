@@ -7,6 +7,8 @@
     <title>Elo Earbuds AR Viewer</title>
 </head>
 <body>
+    <h1 class="hidden">Elo Loop Earbuds</h1>
+   
     <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1">
       <button class="Hotspot" slot="hotspot-1" data-position="108.3110835406044m 99.2124516159404m -109.40759581327438m" data-normal="-5.665538686387998e-16m 0m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id=hotspot-1></div>
@@ -31,7 +33,43 @@
       <button slot="ar-button" id="ar-button">
           View in your space
       </button>
-    </model-viewer> 
+    </model-viewer>
+
+    <div>
+        <img src="images/poster.webp" alt="Elo Earbuds" class="model-fallback">
+
+        <div class="model-text">
+            <h2 class="model-title">ELO LOOP EARBUDS</h2>
+                <p class="model-description">
+                    Designed for elegance, comfort, and superior sound — experience audio that moves with you.
+                </p>
+
+            <img class="icon" src="images/letter-e.png" alt="Letter E Icon">
+            <h3 >Gold Plated Logo</h3>
+                <p class="model-description">
+                    A signature mark of elegance - this gold-plated emblem adds a touch of luxury while symbolizing exceptional craftsmanship.
+                    Designed for elegance, comfort, and superior sound — experience audio that moves with you.
+                </p>
+
+            <img class="icon" src="images/casing.png" alt="Casing Icon">
+            <h3 >Durable Plastic Casing</h3>
+                <p class="model-description">
+                    Built to last. The high-grade polymer shell protects your earbuds from daily wear, ensuring lasting performance and style.
+                </p>
+
+            <img class="icon" src="images/half-circle.png" alt="Half Circle Icon">
+            <h3 >Comfortable Silicone Ear Piece</h3>
+                <p class="model-description">
+                    Designed for all-day comfort. The soft, ergonomic silicone tips provide a secure fit and gentle seal for immersive listening.
+                </p>
+
+            <img class="icon" src="images/audio-waves.png" alt="Audio Waves Icon">
+            <h3 >Superior Sound Quality</h3>
+                <p class="model-description">
+                    Engineered for clarity and depth - experience rich bass, crisp highs, and perfectly balanced sound with every beat.
+                </p>
+        </div>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
