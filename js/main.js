@@ -3,22 +3,22 @@
 
   const infoBoxes = [
     {
-      image: "images/nameofimage.jpg",
+      image: "images/letter-e.png",
       title: "Gold Plated Logo",
       text: "A signature mark of elegance - this gold-plated emblem adds a touch of luxury while symbolizing exceptional craftsmanship."
     },
     {
-      image: "images/nameofimage.jpg",
+      image: "images/airpods.png",
       title: "Durable Plastic Casing",
       text: "Built to last. The high-grade polymer shell protects your earbuds from daily wear, ensuring lasting performance and style."
     },
     {
-      image: "images/nameofimage.jpg",
+      image: "images/half-circle.png",
       title: "Comfortable Silicone Ear Piece",
       text: "Designed for all-day comfort. The soft, ergonomic silicone tips provide a secure fit and gentle seal for immersive listening."
     },
     {
-      image: "images/nameofimage.jpg",
+      image: "images/audio-waves.png",
       title: "Superior Sound Quality",
       text: "Engineered for clarity and depth - experience rich bass, crisp highs, and perfectly balanced sound with every beat."
     }
