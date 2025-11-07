@@ -34,7 +34,7 @@ model-viewer {
 .HotspotAnnotation{
   visibility: hidden;
   background: #F8F7F4;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px #2B2B2B;
   color: #2B2B2B;
   display: block;
@@ -58,6 +58,7 @@ model-viewer {
 }
   
 .HotspotAnnotation h2 {
+    color: #2B2B2B;
     font-size: 18px;
     margin-bottom: 5px;
 }
