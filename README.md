@@ -1,5 +1,5 @@
-# Earbuds_Promotional_Page
-This is a repo for my Earbuds Promotional Page for Level 3 of IDP.
+# Promotional Webpage for Elo Loop Earbuds
+This is a repo for a webpage to promote my designed Elo Loop Earbuds for Level 3 of IDP.
 
 ## Installation
 There is no installation process required. Simply download the files to your computer.
