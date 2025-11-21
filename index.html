@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>Elo Earbuds AR Viewer</title>
 </head>
@@ -10,27 +11,29 @@
     <h1 class="hidden">Elo Loop Earbuds</h1>
    
     <!-- Hero Section -->
-    <div id="hero-section">
+    <div class="grid-con" id="hero-section">
         <h2 class="hidden">Elo Loop Hero Section</h2>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/elo-logo.png" alt="Elo Logo">
-            </a>
+        <header class="col-span-full" id="main-header">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/elo-logo.png" alt="Elo Logo">
+                </a>
 
-            <ul class="nav-menu">
-                <li><a href="#">Colours</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Features</a></li>
-            </ul>
+                <ul class="nav-menu">
+                    <li><a href="#colours">Colours</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                </ul>
 
-            <a href="#" class="nav-icon">
-                <img src="images/search-icon.png" alt="Search Icon">
-            </a>
+                <a href="#" class="nav-icon">
+                    <img src="images/search-icon.png" alt="Search Icon">
+                </a>
 
-            <a href="#" class="nav-icon">
-                <img src="images/shopping-icon.png" alt="Shopping Icon">
-            </a>
-        </nav>
+                <a href="#" class="nav-icon">
+                    <img src="images/shopping-icon.png" alt="Shopping Icon">
+                </a>
+            </nav>
+        </header>
 
         <div class="hero-image">
             <img src="images/hero-img-lg.jpg" alt="Elo Loop Earbuds Hero Image">
@@ -41,7 +44,7 @@
     </div>
 
     <!-- Colour Options -->
-    <div id="colour-section">
+    <div class="col-span-full" id="colours">
         <h2 class="hidden">Elo Loop Colours</h2>
         <img id="light-colour" src="images/earbuds_light.png" alt="Light Earbud Colour Options">
         <img id="dark-colour" src="images/earbuds_dark.png" alt="Dark Earbud Colour Options">
@@ -57,7 +60,7 @@
     </div>
 
     <!-- AR Model Viewer -->
-    <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1">
+    <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" class="col-span-full" id="about">
       <button class="Hotspot" slot="hotspot-1" data-position="108.3110835406044m 99.2124516159404m -109.40759581327438m" data-normal="-5.665538686387998e-16m 0m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id=hotspot-1></div>
       </button>
@@ -127,7 +130,7 @@
     </div>
 
     <!-- Features Section -->
-    <div id="features-section">
+    <div class="col-span-full" id="features">
         <h2 class="hidden">Elo Loop Features</h2>
         <h3>features</h3>
             <p>
@@ -147,7 +150,7 @@
     </div>
 
     <!-- Promo Posters -->
-    <div>
+    <div class="col-span-full" id="promo">
         <h2 class="hidden">Elo Loop Promo Posters</h2>
         <img class="promo-img" src="images/promo-1.jpg" alt="Earbud Promo Poster 1">
         <img class="promo-img" src="images/promo-2.jpg" alt="Earbud Promo Poster 2">
@@ -156,6 +159,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
