@@ -67,73 +67,26 @@
 
     });
   }
+  loadInfo();
 
-    loadInfo();
+   function showInfo() {
+    //console.log(this.slot);
+    //console.log(`#${this.slot}`);
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, { duration: 1, autoAlpha: 1 });
+  }
 
-    function showInfo() {
-      //console.log(this.slot);
-      //console.log(`#${this.slot}`);
-      let selected = document.querySelector(`#${this.slot}`);
-      gsap.to(selected, { duration: 1, autoAlpha: 1 });
-    }
-
-    function hideInfo() {
-      //console.log(this.slot);
-      //console.log(`#${this.slot}`);
-      let selected = document.querySelector(`#${this.slot}`);
-      gsap.to(selected, { duration: 1, autoAlpha: 0 });
-    }
-    
-  hotspots.forEach(function (hotspot) {
-      hotspot.addEventListener("mouseenter", showInfo);
-      hotspot.addEventListener("mouseleave", hideInfo);
-    });
-
-// Scrolling Animation
-  (()=> {
-      console.log("IIFE Called");
-
-      const canvas = document.querySelector("#explode-view");
-      const context = canvas.getContext("2d");
-
-      canvas.width= 1920;
-      canvas.height = 1080;
-
-      const frameCount = 131; 
-      const images = [];
-      const buds = {
-          frame: 0
-      }
-
-      for (let i=0; i<frameCount; i++) {
-          const img = new Image();
-          img.src = `images/scrolling_sequence/earbuds_${(i+1).toString().padStart(4, '0')}.webp`;
-          images.push(img);
-      }
-      console.log(images);
-
-      gsap.to(buds, {
-          frame: 131,
-          snap: "frame",
-          scrollTrigger: {
-              trigger: "#explode-view",
-              pin: true,
-              scrub: 1,
-              start: "top top",
-              markers: false
-          },
-          onUpdate: render
-      })
-
-      images[0].addEventListener("load", render);
-
-      function render() {
-          //console.log(buds.frame);
-          //console.log(images[buds.frame]);
-          context.clearRect(0,0, canvas.width, canvas.height);
-          context.drawImage(images[buds.frame], 0, 0);
-      }
-  })();
+  function hideInfo() {
+    //console.log(this.slot);
+    //console.log(`#${this.slot}`);
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, { duration: 1, autoAlpha: 0 });
+  }
+  
+ hotspots.forEach(function (hotspot) {
+    hotspot.addEventListener("mouseenter", showInfo);
+    hotspot.addEventListener("mouseleave", hideInfo);
+  });
 
   // Scroll To Animation
   gsap.registerPlugin(ScrollToPlugin);
