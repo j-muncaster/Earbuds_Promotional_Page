@@ -68,4 +68,28 @@
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
+
+  gsap.registerPlugin(ScrollToPlugin);
+    
+    const navLinks = document.querySelectorAll("#main-header nav ul li a");
+
+    function scrollLink(event) {
+        // console.log("scroll link function called");
+        event.preventDefault();
+        // console.log(event.currentTarget.hash);
+        let selected = event.currentTarget.hash;
+        gsap.to(window, {
+            duration: 1.5,
+            scrollTo: {
+                y: `${selected}`,
+                offsetY: 100,
+                ease: "power1.out"
+            }
+        })
+    }
+
+    navLinks.forEach((navLink)=>{
+        navLink.addEventListener("click", scrollLink);
+    })
+
 })();
