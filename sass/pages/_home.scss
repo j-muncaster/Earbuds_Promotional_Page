@@ -46,12 +46,27 @@
 
 // Scrub | Scroll Sequence
 
-#explode-view {
+#scroll-view {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
+}
+
+#scrolling-animation h3 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+#scrolling-animation p {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
 }
 
 /* Mobile */
@@ -79,5 +94,17 @@
         width: 160px;
         height: 60px;
         padding: 10px 15px;
+    }
+
+    #scrolling-animation h3 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    #scrolling-animation p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        padding: 0 15px;
     }
 }
