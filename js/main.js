@@ -92,7 +92,7 @@
 // Scrub | Scroll Sequence
 console.log("IIFE Called");
 
-    const canvas = document.querySelector("#explode-view");
+    const canvas = document.querySelector("#scroll-view");
     const context = canvas.getContext("2d");
 
     canvas.width= 1920;
@@ -115,7 +115,7 @@ console.log("IIFE Called");
         frame: 131,
         snap: "frame",
         scrollTrigger: {
-            trigger: "#explode-view",
+            trigger: "#scroll-view",
             pin: true,
             scrub: 1,
             start: "top top",
@@ -133,6 +133,23 @@ console.log("IIFE Called");
         context.drawImage(images[buds.frame], 0, 0);
     }
 
+// Xray Slider
+
+const divisor = document.querySelector("#divide");
+    const slider = document.querySelector("#slider");
+
+    function moveDivide() {
+        // console.log(slider.value);
+        divisor.style.width = `${slider.value}%`;
+    }
+
+    function resetSlider() {
+        slider.value = 50;
+    }
+
+    slider.addEventListener("input", moveDivide);
+    window.addEventListener("load", resetSlider);
+    
 // Scroll To Animation
   gsap.registerPlugin(ScrollToPlugin);
     
