@@ -1,3 +1,18 @@
+h3 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
 // Hero Section
 
 #hero-section {
@@ -54,23 +69,48 @@
     padding: 0;
 }
 
-#scrolling-animation h3 {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    margin: 40px 0 20px 0;
+// Features
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-#scrolling-animation p {
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    text-align: center;
+.features img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+// Promo Posters
+.promo-posters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.promo-posters img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Mobile */
 @media screen and (max-width: 760px) {
+    h3 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
     #hero-section {
         background-image: url('../images/hero-img-sm.jpg');
         height: 60vh;
@@ -96,15 +136,14 @@
         padding: 10px 15px;
     }
 
-    #scrolling-animation h3 {
-        font-size: 32px;
-        margin-bottom: 15px;
+    .promo-posters img {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    #scrolling-animation p {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 20px;
-        padding: 0 15px;
+    .features img {
+        width: 100%;
+        margin: 0 auto;
     }
+
 }
