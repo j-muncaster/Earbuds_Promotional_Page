@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+$font-primary: 'Questrial', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+body {
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: #2b2b2b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+p {
+  font-family: $font-secondary;
+  font-weight: $font-weight-normal;
+  margin-bottom: 16px;
+}
