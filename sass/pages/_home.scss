@@ -17,7 +17,7 @@ p {
     text-align: center;
 }
 
-// Hero Section
+/* Hero Section */
 
 #hero-section {
     width: 100%;
@@ -63,7 +63,7 @@ p {
     color: #F8F7F4;
 }
 
-// Colour Options Section
+/* Colour Options Section */
 
 .colour-container-wrapper {
     width: 100%;
@@ -131,7 +131,7 @@ p {
     display: none;
 }
 
-// Scrub | Scroll Sequence
+/* Scrub | Scroll Sequence */
 
 #scroll-view {
     display: block;
@@ -141,7 +141,8 @@ p {
     padding: 0;
 }
 
-// Features
+/* Features */
+
 .features {
     background-color: #9C8F83;
     padding-bottom: 30px;
@@ -167,7 +168,8 @@ p {
     display: none;
 }
 
-// Promo Posters
+/* Promo Posters */
+
 .promo-posters {
     background-color: #9C8F83;
     padding-bottom: 30px;
@@ -191,12 +193,6 @@ p {
 
 .poster-img-sm {
     display: none;
-}
-
-#footer p {
-    margin: 0 auto;
-    text-align: center;
-    display: block;
 }
 
 /* Mobile */

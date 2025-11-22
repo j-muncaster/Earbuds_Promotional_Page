@@ -13,10 +13,9 @@
 </head>
 <body>
     <h1 class="hidden">Elo Loop Earbuds</h1>
-   
     <!-- Main Nav -->
-    <h2 class="hidden">Main Nav</h2>
     <div class="col-span-full" id="hero-section">
+        <h2 class="hidden">Header</h2>
         <header id="main-header">
             <a href="index.html" class="logo">
                 <img src="images/elo-logo.png" alt="Elo Logo">
@@ -26,9 +25,10 @@
             <div class="overlay" id="menu">
                 <img id="close" src="images/close.png" alt="Close Icon">
                 <nav>
+                    <h2 class="hidden">Main Nav</h2>
                     <ul class="nav-menu">
                         <li><a href="#colours">colours</a></li>
-                        <li><a href="#about">about</a></li>
+                        <li><a href="#ar-text">about</a></li>
                         <li><a href="#details">features</a></li>
                     </ul>
 
@@ -51,7 +51,7 @@
     </div>
 
     <!-- Colour Options -->
-    <div class="colour-container-wrapper">
+    <div class="colour-container-wrapper" id="colours">
         <div class="colour-container">
             <h2 class="hidden">Colour Options Section</h2>
             <div class="colour-images">
@@ -79,7 +79,7 @@
         <p>Interact with the Elo Loop earbuds in full 3D. Click and drag to rotate the model from any angle, and tap the glowing hotspots to uncover details about the engineering, materials, and features built into every pair.</p>
     </div>
 
-    <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" class="col-span-full" id="about">
+    <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" class="col-span-full">
       <button class="Hotspot" slot="hotspot-1" data-position="108.3110835406044m 99.2124516159404m -109.40759581327438m" data-normal="-5.665538686387998e-16m 0m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id=hotspot-1></div>
       </button>
