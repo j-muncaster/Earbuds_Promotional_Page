@@ -63,6 +63,74 @@ p {
     color: #F8F7F4;
 }
 
+// Colour Options Section
+
+.colour-container-wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+.colour-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.colour-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.colour-images img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.colour-text {
+    flex: 1;
+}
+
+.colour-text h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.colour-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2B2B2B;
+}
+
+.colour-circles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.colour-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.colour-circle:hover {
+    transform: scale(1.1);
+}
+
+.poster-con button {
+    display: none;
+}
+
 // Scrub | Scroll Sequence
 
 #scroll-view {
@@ -122,8 +190,14 @@ p {
 }
 
 .poster-img-sm {
-        display: none;
-    }
+    display: none;
+}
+
+#footer p {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
 
 /* Mobile */
 @media screen and (max-width: 760px) {
@@ -141,7 +215,6 @@ p {
 
     #hero-section {
         background-image: url('../images/hero-img-sm.jpg');
-        height: 60vh;
     }
 
     .hero-content {
@@ -164,17 +237,34 @@ p {
         padding: 10px 15px;
     }
 
+    .colour-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .colour-text {
+        margin-top: 20px;
+    }
+
+    .colour-images img {
+        max-width: 80%;
+    }
+
     .promo-posters img {
         width: 100%;
         margin: 0 auto;
     }
 
-    .poster-img-sm {
-        display: block;
-    }
-
     .poster-img-lg {
         display: none;
+    }
+
+    .poster-img-sm {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
     }
 
     .features img {
@@ -189,5 +279,4 @@ p {
     .features-img-lg {
         display: none;
     }
-
 }
