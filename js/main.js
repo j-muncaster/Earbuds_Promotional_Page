@@ -1,6 +1,6 @@
 (() => {
 
-  // Hamburger Menu
+// Hamburger Menu
   const menu = document.querySelector("#menu");
     const hamburger = document.querySelector("#hamburger");
     const closeButton = document.querySelector("#close");
@@ -17,8 +17,19 @@
     })
     hamburger.addEventListener("click", toggleMenu);
 
-  
-  // AR Viewer 
+// Colour Picker
+
+    const mainEarbud = document.querySelector('#main-earbud');
+    const colourCircles = document.querySelectorAll('.colour-circle');
+
+    colourCircles.forEach(circle => {
+      circle.addEventListener('click', () => {
+        mainEarbud.src = circle.dataset.image;
+      });
+    });
+
+// AR Viewer 
+
   const hotspots = document.querySelectorAll(".Hotspot");
 
   const infoBoxes = [
@@ -43,8 +54,6 @@
       text: "Engineered for clarity and depth - experience rich bass, crisp highs, and perfectly balanced sound with every beat."
     }
   ]
-
-//functions
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=>{
@@ -88,8 +97,8 @@
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
-
 // Scrub | Scroll Sequence
+
 console.log("IIFE Called");
 
     const canvas = document.querySelector("#scroll-view");
@@ -135,40 +144,41 @@ console.log("IIFE Called");
 
 // Xray Slider
 
-const divisor = document.querySelector("#divide");
-    const slider = document.querySelector("#slider");
+  const divisor = document.querySelector("#divide");
+      const slider = document.querySelector("#slider");
 
-    function moveDivide() {
-        // console.log(slider.value);
-        divisor.style.width = `${slider.value}%`;
-    }
+      function moveDivide() {
+          // console.log(slider.value);
+          divisor.style.width = `${slider.value}%`;
+      }
 
-    function resetSlider() {
-        slider.value = 50;
-    }
+      function resetSlider() {
+          slider.value = 50;
+      }
 
-    slider.addEventListener("input", moveDivide);
-    window.addEventListener("load", resetSlider);
+      slider.addEventListener("input", moveDivide);
+      window.addEventListener("load", resetSlider);
     
 // Scroll To Animation
-  gsap.registerPlugin(ScrollToPlugin);
-    
-    const navLinks = document.querySelectorAll("#main-header nav ul li a");
 
-    function scrollLink(event) {
-        // console.log("scroll link function called");
-        event.preventDefault();
-        // console.log(event.currentTarget.hash);
-        let selected = event.currentTarget.hash;
-        gsap.to(window, {
-            duration: 1.5,
-            scrollTo: {
-                y: `${selected}`,
-                offsetY: 100,
-                ease: "power1.out"
-            }
-        })
-    }
+    gsap.registerPlugin(ScrollToPlugin);
+      
+      const navLinks = document.querySelectorAll("#main-header nav ul li a");
+
+      function scrollLink(event) {
+          // console.log("scroll link function called");
+          event.preventDefault();
+          // console.log(event.currentTarget.hash);
+          let selected = event.currentTarget.hash;
+          gsap.to(window, {
+              duration: 1.5,
+              scrollTo: {
+                  y: `${selected}`,
+                  offsetY: 100,
+                  ease: "power1.out"
+              }
+          })
+      }
 
     navLinks.forEach((navLink)=>{
         navLink.addEventListener("click", scrollLink);
