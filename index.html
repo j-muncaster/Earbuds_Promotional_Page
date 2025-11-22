@@ -29,7 +29,7 @@
                     <ul class="nav-menu">
                         <li><a href="#colours">colours</a></li>
                         <li><a href="#about">about</a></li>
-                        <li><a href="#features">features</a></li>
+                        <li><a href="#details">features</a></li>
                     </ul>
 
                     <div class="nav-right">
@@ -67,6 +67,12 @@
     </div>
 
     <!-- AR Model Viewer -->
+    <h2 class="hidden">AR Model Viewer</h2>
+    <div id="ar-text">
+        <h3>spin, explore, and uncover.</h3>
+        <p>Interact with the Elo Loop earbuds in full 3D. Click and drag to rotate the model from any angle, and tap the glowing hotspots to uncover details about the engineering, materials, and features built into every pair.</p>
+    </div>
+
     <model-viewer src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1" class="col-span-full" id="about">
       <button class="Hotspot" slot="hotspot-1" data-position="108.3110835406044m 99.2124516159404m -109.40759581327438m" data-normal="-5.665538686387998e-16m 0m -1m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation" id=hotspot-1></div>
@@ -97,7 +103,6 @@
         <img src="images/earbud_model.png" alt="Elo Earbuds" class="model-fallback">
 
         <div class="model-text">
-        <h2 class="model-title">ELO LOOP EARBUDS</h2>
         <p class="model-description">
             Designed for elegance, comfort, and superior sound — experience audio that moves with you.
         </p>
@@ -137,19 +142,31 @@
     </div>
 
     <!-- Features Section -->
-    <div class="col-span-full features">
+    <div class="features" id="details">
         <h2 class="hidden">Elo Loop Features</h2>
+
         <h3>features</h3>
-            <p>
-                Elo Loop earbuds blend refined, modern design with reliable everyday performance. The magnetic loop straps provide secure stability 
-                during movement, while the smooth, ergonomic shape ensures lasting comfort wherever your day takes you. With clear, balanced audio, 
-                responsive touch controls, and dependable Bluetooth connectivity, Elo Loop is built for both active and casual use. Housed in a sleek, 
-                compact charging case, they deliver thoughtful functionality wrapped in a beautifully minimal form.
-            </p>
-        <img class="features-img-lg" src="images/features-1.jpg" alt="Earbud Features Image 1">
-        <img class="features-img-sm" src="images/features-2.jpg" alt="Earbud Features Image 2">
-        <img class="features-img-sm" src="images/features-3.jpg" alt="Earbud Features Image 3">
-    </div>
+        <p>
+            Elo Loop earbuds blend refined, modern design with reliable everyday performance. 
+            The magnetic loop straps provide secure stability during movement, while the smooth, 
+            ergonomic shape ensures lasting comfort wherever your day takes you. With clear, balanced 
+            audio, responsive touch controls, and dependable Bluetooth connectivity, Elo Loop is built 
+            for both active and casual use. Housed in a sleek, compact charging case, they deliver 
+            thoughtful functionality wrapped in a beautifully minimal form.
+        </p>
+
+        <div class="features-row">
+            <img class="features-img-sm" src="images/features-1-sm.jpg" alt="Earbud Features Image 1">
+            <img class="features-img-sm" src="images/features-2-sm.jpg" alt="Earbud Features Image 2">
+            <img class="features-img-sm" src="images/features-3-sm.jpg" alt="Earbud Features Image 3">
+        </div>
+
+        <div class="features-row">
+            <img class="features-img-lg" src="images/features-1-lg.jpg" alt="Earbud Features Image 1">
+            <img class="features-img-lg" src="images/features-2-lg.jpg" alt="Earbud Features Image 2">
+            <img class="features-img-lg" src="images/features-3-lg.jpg" alt="Earbud Features Image 3">
+        </div>
+    </div>  
 
     <!-- Earbuds Scrolling Animation -->
     <div id="scrolling-animation">
@@ -190,9 +207,17 @@
         <h3>discover the elo experience</h3>
             <p>Sleek, playful, and crafted for your everyday adventures, they deliver crystal-clear sound, effortless comfort, and a touch of whimsy in every detail. Designed to fit your world and your style, Elo Loop brings joy to every moment you listen.</p>
 
-        <img src="images/promo-1.jpg" alt="Poster 1">
-        <img src="images/promo-2.jpg" alt="Poster 2">
-        <img src="images/promo-3.jpg" alt="Poster 3">
+        <div class="poster-row poster-img-sm">
+            <img src="images/promo-1-sm.jpg" alt="Poster 1">
+            <img src="images/promo-2-sm.jpg" alt="Poster 2">
+            <img src="images/promo-3-sm.jpg" alt="Poster 3">
+        </div>
+
+        <div class="poster-row poster-img-lg">
+            <img src="images/promo-1-lg.jpg" alt="Poster 1">
+            <img src="images/promo-2-lg.jpg" alt="Poster 2">
+            <img src="images/promo-3-lg.jpg" alt="Poster 3">
+        </div>
     </div>
 
     <!-- Footer -->

@@ -1,4 +1,11 @@
-/* ===== MODEL VIEWER (Desktop) ===== */
+.model-section,
+.model-text,
+.model-title,
+.model-description,
+.feature {
+  text-align: left !important;
+}
+
 model-viewer {
   width: auto;
   max-width: 1200px;
@@ -23,21 +30,17 @@ model-viewer {
 
 .Hotspot:not([data-visible]) {
   opacity: 0;
+  pointer-events: none;
   width: 45px;
   height: 38px;
-  pointer-events: none;
-  opacity: 0;
-  width: 45px;
-  height: 38px;
-  pointer-events: none;
 }
 
 .Hotspot:focus {
   border: 8px solid #999977;
   border-radius: 50%;
   height: 32px;
-  outline: none;
   width: 32px;
+  outline: none;
 }
 
 .HotspotAnnotation {
@@ -47,7 +50,6 @@ model-viewer {
   box-shadow: 0 2px 4px #2B2B2B;
   color: #2B2B2B;
   display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
   font-size: 18px;
   font-weight: 700;
   left: calc(100% + 1em);
@@ -57,13 +59,12 @@ model-viewer {
   position: absolute;
   top: 50%;
   width: max-content;
-  text-align: left;
 }
 
 .HotspotAnnotation p {
   color: #2B2B2B;
-  line-height: 22px;
   font-weight: 300;
+  line-height: 22px;
 }
 
 .HotspotAnnotation h2 {
@@ -82,13 +83,16 @@ model-viewer::part(default-progress-mask) {
 }
 
 .model-section {
-  text-align: center;
   margin: 2rem auto;
   max-width: 1200px;
 }
 
-.model-fallback {
+.model-fallback,
+.model-text {
   display: none;
+}
+
+.model-fallback {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -96,83 +100,8 @@ model-viewer::part(default-progress-mask) {
 }
 
 .model-text {
-  display: none;
   margin-top: 1.5rem;
   padding: 0 1rem;
-  color: #2B2B2B;
-  font-family: Futura, Helvetica Neue, sans-serif;
-}
-
-.model-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.model-description {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #4a4a4a;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* --- MOBILE --- */
-@media (max-width: 768px) {
-  model-viewer {
-    display: none;
-  }
-
-  .model-fallback,
-  .model-text {
-    display: block;
-  }
-
-  .model-section {
-    max-width: 90%;
-    margin: 2rem auto;
-  }
-
-  .model-title {
-    font-size: 1.5rem;
-  }
-
-  .model-description {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-}
-  
-.HotspotAnnotation h2 {
-    color: #2B2B2B;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.HotspotAnnotation h2 {
-  color: #2B2B2B;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.model-fallback-wrapper {
-  text-align: left;
-  margin: 5px auto;
-  max-width: 1200px;
-}
-
-.model-fallback {
-  display: none;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  background-color: #F8F7F4;
-}
-
-.model-text {
-  display: none;
-  margin-top: 24px;
-  padding: 0 10px;
   color: #2B2B2B;
   font-family: Futura, Helvetica Neue, sans-serif;
 }
@@ -193,8 +122,7 @@ model-viewer::part(default-progress-mask) {
 
 .feature {
   display: flex;
-  align-items: start;
-  justify-content: left;
+  align-items: flex-start;
   gap: 18px;
   margin-top: 24px;
 }
@@ -202,8 +130,8 @@ model-viewer::part(default-progress-mask) {
 .feature h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #2B2B2B;
   margin: 0;
+  color: #2B2B2B;
 }
 
 .icon {
@@ -211,7 +139,6 @@ model-viewer::part(default-progress-mask) {
   height: 32px;
 }
 
-/* --- MOBILE VIEW --- */
 @media (max-width: 768px) {
   model-viewer {
     display: none;
@@ -225,6 +152,7 @@ model-viewer::part(default-progress-mask) {
   .model-fallback-wrapper {
     max-width: 90%;
     margin: 32px auto;
+    text-align: left;
   }
 
   .model-title {
@@ -235,15 +163,15 @@ model-viewer::part(default-progress-mask) {
     font-size: 16px;
     line-height: 1.5;
   }
-  
-  .HotspotAnnotation h2 {
-      color: #2B2B2B;
-      font-size: 18px;
-      margin-bottom: 5px;
-  }tashed changes
 
-  .icon {
-    width: 32px;
-    height: 32px;
+  /* Reapply hotspot title style once */
+  .HotspotAnnotation h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #2B2B2B;
+  }
+
+  #ar-text {
+    display: none;
   }
 }
